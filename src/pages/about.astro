@@ -1,12 +1,21 @@
 ---
+const pageTitle = "关于我";
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+
+<title>{pageTitle}</title>
 <Layout>
-	<a href="/" target="_blank" title="/">首页</a>
+	<a href="/" target="_self" title="/" class="nav-link">首页</a>
+    <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
+    <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
+    <a href="/test" target="_self" title="/test" class="nav-link">测试</a>
+	
 	<h1 style="text-align: center;">关于我</h1>	
 	<p style="text-align:center">网页二</p>
 	<p>这是我第一个astro网页,也是我为数不多,想要认真对待的前端学习之旅。</p>

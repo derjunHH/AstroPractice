@@ -5,13 +5,13 @@ import Layout from '../layouts/Layout.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<body>
-	<h1>我的第一个Astro网站</h1>	
-	<p>这里是网页一</p>
-	<!-- <p>这是测试</p> -->
-	<a href="/about" target="_blank" title="/about">关于我</a>
-	<a href="/test" target="_blank" title="/test">test</a>
-</body>
+
 <Layout>
+	<a href="/" target="_self" title="/" class="nav-link">首页</a>
+	<a href="/about" target="_self" title="/about" class="nav-link">关于</a>
+	<a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
+	<a href="/test" target="_self" title="/test" class="nav-link">测试</a>
+	<h1>我的第一个Astro网站</h1>	
+	<p>这里是首页</p>
 	<Welcome />
 </Layout>

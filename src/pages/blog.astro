@@ -1,0 +1,23 @@
+---
+const pageTitle = "博客"
+import Layout from '../layouts/Layout.astro';
+import Welcome from '../components/Welcome.astro';
+---
+<title>{pageTitle}</title>
+<Layout>
+    <a href="/" target="_self" title="/" class="nav-link">首页</a>
+    <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
+    <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
+    <a href="/test" target="_self" title="/test" class="nav-link">测试</a>
+
+    <h1>我的Astro学习博客</h1>
+    <p>这是Astro学习笔记博客网页</p>
+    <ul>
+        <!-- <dt>文章列表</dt> -->
+        <li><a href="/posts/post-1/" target="_self" title="/post-1">文章一</a></li>
+        <li><a href="posts/post-2/" target="_self" title="/post-2">文章二</a></li><!-- li是list缩写表示列表项必须再<ul>(Unordered list)<ol>(ordered list)<dl>(Description list，包含<dt>(术语)<dd>(描述))<div><section><nav>(导航链接)下-->
+        <li><a href="posts/post-3/" target="_self" title="/post-3">文章三</a></li>
+        <!-- <dd>描述</dd> -->
+    </ul>
+    <Welcome />
+</Layout>
