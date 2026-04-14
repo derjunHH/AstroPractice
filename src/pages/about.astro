@@ -4,6 +4,16 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 
+const identity = {
+  firstName: "Der骏",
+  country: "China",
+  occupation: "学生",
+  hobbies: ["摄影", "游戏", "羽毛球"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -16,9 +26,25 @@ import Layout from '../layouts/Layout.astro';
     <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
     <a href="/test" target="_self" title="/test" class="nav-link">测试</a>
 	
-	<h1 style="text-align: center;">关于我</h1>	
+	<h1 style="text-align: center;">{pageTitle}</h1>	
 	<p style="text-align:center">网页二</p>
 	<p>这是我第一个astro网页,也是我为数不多,想要认真对待的前端学习之旅。</p>
 	<p>这将继续拓展我的爱好,并加深对计算机的理解,以此来消解迷茫,为现在找寻目标。</p>
-	<Welcome />
+	<p>以下是关于我的几个事实：</p>
+	<ul>
+		<li>我的名字是{identity.firstName}.</li>
+		<li>我住在{identity.country}。我的职业是{identity.occupation}。</li>
+		{identity.hobbies.length >= 2 &&
+	    <li>我的两个习惯：{identity.hobbies[0]}和{identity.hobbies[1]}</li>
+		}
+	</ul>
+	<p>我的技能是：</p>
+	<ul>
+		{skills.map((skill) => <li>{skill}</li>)}<!--lambda表达式-->
+	</ul>
+	{happy && <p>我非常乐意学习Astro!</p>}
+	{finished && <p>我完成了本节内容！</p>}
+	{goal==3 ? <p>我的目标是三天内完成。</p>:<p>我的目标不是3天。</p>}
+	<!-- 通过在花括号里写js并用与判断来实现条件判断 -->
+	<!-- <Welcome /> -->
 </Layout>
