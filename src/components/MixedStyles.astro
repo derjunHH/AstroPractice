@@ -1,0 +1,10 @@
+<style>
+  /* 仅限于此组件。 */
+  h1 { color: red; }
+  /* 混合：仅限于子组件的 <h1> 标签。 */
+  article :global(h1) {
+    color: blue;
+  }
+</style>
+<h1>混合标签局部组件</h1>
+<article>随便啦<slot />真的很随便</article>

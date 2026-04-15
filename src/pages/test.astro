@@ -1,6 +1,10 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import GlobalStyles from '../components/GlobalStyles.astro';
+import MixedStyles from '../components/MixedStyles.astro';
+import ClassList from '../components/ClassList.astro';
+import '../styles/global.css';
 
 const pageTitle ="测试"
 
@@ -9,12 +13,20 @@ const pageTitle ="测试"
 ---
 <title>{pageTitle}</title>
 <Layout>
-	<a href="/" target="_blank" title="/" class="nav-link">首页</a>
+	<a href="/" target="_blank" title="/" class="nav-link">首页(新开一页版)</a>
     <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
     <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
     <a href="/test" target="_self" title="/test" class="nav-link">测试</a>
 	<h1 style="text-align:center">这是测试页面</h1>
 	<p style="text-align: center">这里是测试页面</p>
 	<!-- <p>这是我第一个astro网页也是我为数不多想要认真学习的j</p>这个长度是极限再长就会乱码，当和<a></a>组合的时候，并且注释也会导致网页乱码,这个长度之后任何语句添加都会导致乱码 -->
+	<!-- <GlobalStyles>
+		<h1>这里是全局h1标签CSS应用</h1> (无效，这个只传递Style标签，不能传递样式)
+		</GlobalStyles>-->
+	<GlobalStyles/><!--/*引入全局样式*/ -->
+	<MixedStyles>
+		<h1>这里是混合CSS应用</h1>
+	</MixedStyles>
+	<ClassList>这是个盒子</ClassList>
 	<Welcome />
 </Layout>

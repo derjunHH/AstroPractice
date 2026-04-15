@@ -1,0 +1,11 @@
+---
+const { isRed } = Astro.props;
+---
+<!-- 如果 `isRed` 是真值，class 将是 "box red"。 -->
+<!-- 如果 `isRed` 是假值，class 将是 "box"。 -->
+<div class:list={['box', { red: isRed }]}><slot /></div>
+
+<style>
+  .box { border: 1px solid blue; }
+  .red { border-color: red; }
+</style>
