@@ -1,6 +1,7 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 
 const pageTitle="首页"
@@ -10,10 +11,11 @@ const pageTitle="首页"
 ---
 <title>{pageTitle}</title>
 <Layout>
-	<a href="/" target="_self" title="/" class="nav-link">首页</a>
+	<Navigation />
+	<!-- <a href="/" target="_self" title="/" class="nav-link">首页</a>
 	<a href="/about" target="_self" title="/about" class="nav-link">关于</a>
 	<a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
-	<a href="/test" target="_self" title="/test" class="nav-link">测试</a>
+	<a href="/test" target="_self" title="/test" class="nav-link">测试</a> -->
 	<h1>我的第一个Astro网站</h1>	
 	<p>这里是首页</p>
 	<Welcome />

@@ -1,6 +1,8 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 
@@ -38,10 +40,11 @@ const textCase = "uppercase";
 		}
 	</style>
 		
-	<a href="/" target="_self" title="/" class="nav-link">首页</a>
+	<Navigation />
+	<!-- <a href="/" target="_self" title="/" class="nav-link">首页</a>
     <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
     <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
-    <a href="/test" target="_self" title="/test" class="nav-link">测试</a>
+    <a href="/test" target="_self" title="/test" class="nav-link">测试</a> -->
 	
 	<h1 style="text-align: center;">{pageTitle}</h1>	
 	<p style="text-align:center">网页二</p>
@@ -68,4 +71,5 @@ const textCase = "uppercase";
 	{goal==3 ? <p>我的目标是三天内完成。</p>:<p>我的目标不是3天。</p>}
 	<!-- 通过在花括号里写js并用与判断来实现条件判断 -->
 	<!-- <Welcome /> -->
+	<Footer />
 </Layout>
