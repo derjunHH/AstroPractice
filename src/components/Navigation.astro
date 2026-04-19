@@ -1,4 +1,10 @@
-<a href="/" target="_self" title="/" class="nav-link">首页</a>
+---
+const { path, target, title, name} = Astro.props;
+---
+<!-- <a href="/" target="_self" title="/" class="nav-link">首页</a>
 <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
 <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
-<a href="/test" target="_self" title="/test" class="nav-link">测试</a>
+<a href="/test" target="_self" title="/test" class="nav-link">测试</a> -->
+<div id="main-menu" class="nav-links">
+    <a href={path} target={target} title={title} class="nav-link">{name}</a>
+</div>

@@ -1,9 +1,20 @@
 ---
-const platform = "github";
-const username = "derjunHH";
+import Social from "./Social.astro";
+// const platform = "github";
+// const username = "derjunHH";
 const porject = "AstroPractice";
 ---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
 
 <footer>
-  <p>在 <a href={`https://www.${platform}.com/${username}/${porject}`} target="_blank" title="MyProject" >{platform}</a> 上，了解有关我的项目的更多信息！</p>
+  <!-- <p>在 <a href={`https://www.${platform}.com/${username}/${porject}`} target="_blank" title="MyProject" >{platform}</a> 上，了解有关我的项目的更多信息！</p> -->
+  <Social platform="github" username="derjunHH" />
+  <Social platform="twitter" username="derjunHH" />
+  <Social platform="youtube" username="derjunHH" />
 </footer>

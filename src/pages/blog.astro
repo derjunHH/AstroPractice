@@ -2,12 +2,13 @@
 const pageTitle = "博客"
 import Layout from '../layouts/Layout.astro';
 import Welcome from '../components/Welcome.astro';
-import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 ---
 <title>{pageTitle}</title>
 <Layout>
-    <Navigation />
+    <Header />
     <!-- <a href="/" target="_self" title="/" class="nav-link">首页</a>
     <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
     <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
@@ -23,4 +24,5 @@ import '../styles/global.css';
         <!-- <dd>描述</dd> -->
     </ul>
     <Welcome />
+    <Footer />
 </Layout>

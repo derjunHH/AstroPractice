@@ -4,7 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import GlobalStyles from '../components/GlobalStyles.astro';
 import MixedStyles from '../components/MixedStyles.astro';
 import ClassList from '../components/ClassList.astro';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle ="测试"
@@ -14,7 +15,7 @@ const pageTitle ="测试"
 ---
 <title>{pageTitle}</title>
 <Layout>
-	<Navigation />
+	<Header />
 	<!-- <a href="/" target="_blank" title="/" class="nav-link">首页(新开一页版)</a>
     <a href="/about" target="_self" title="/about" class="nav-link">关于</a>
     <a href="/blog" target="_self" title="/blog" class="nav-link">博客</a>
@@ -31,4 +32,5 @@ const pageTitle ="测试"
 	</MixedStyles>
 	<ClassList>这是个盒子</ClassList>
 	<Welcome />
+	<Footer />
 </Layout>
